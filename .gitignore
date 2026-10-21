@@ -1,0 +1,32 @@
+node_modules/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+dist/
+__pycache__/
+.pytest_cache/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+!.env.demo.example
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.demo.example
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+
+# Dependencies and generated files
+node_modules/
+.venv/
+venv/
+dist/
+__pycache__/
+.pytest_cache/

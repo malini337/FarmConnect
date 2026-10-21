@@ -1,0 +1,610 @@
+/* =========================================================
+   FARMCONNECT PRODUCTS / MARKETPLACE
+   ========================================================= */
+
+.products-page {
+  min-height: 100vh;
+
+  margin-left: 270px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8cf 0%,
+      #eef8dc 48%,
+      #dff2ee 100%
+    );
+
+  font-family: "Times New Roman", serif;
+
+  color: #173f2a;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.products-main {
+  min-height: 100vh;
+
+  padding: 35px 38px 45px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.products-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+
+  padding: 25px 30px;
+
+  border-radius: 22px;
+
+  background: #173f2a;
+
+  border: 2px solid #d5b43c;
+
+  color: #fff8d6;
+
+  box-shadow:
+    0 10px 30px
+    rgba(23, 63, 42, 0.15);
+}
+
+.products-eyebrow {
+  margin: 0 0 7px;
+
+  color: #f5c542;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+.products-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+}
+
+.products-subtitle {
+  margin: 8px 0 0;
+
+  color: #d5e5d9;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   PRODUCT COUNT
+   ========================================================= */
+
+.products-count {
+  min-width: 100px;
+
+  padding: 14px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #f5c542;
+
+  color: #173f2a;
+
+  box-sizing: border-box;
+}
+
+.products-count strong {
+  font-size: 30px;
+
+  line-height: 1;
+}
+
+.products-count span {
+  margin-top: 5px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.products-controls {
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 17px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 2px solid #9bc9ae;
+
+  border-radius: 13px;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #f5c542;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(245, 197, 66, 0.18);
+}
+
+.search-box span {
+  font-size: 20px;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #173f2a;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+}
+
+.search-box input::placeholder {
+  color: #72877a;
+}
+
+.products-controls select {
+  width: 210px;
+
+  padding: 0 15px;
+
+  border: 2px solid #9bc9ae;
+
+  border-radius: 13px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #173f2a;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.products-controls select:focus {
+  border-color: #f5c542;
+}
+
+
+/* =========================================================
+   CART MESSAGE
+   ========================================================= */
+
+.cart-message {
+  margin-bottom: 18px;
+
+  padding: 12px 17px;
+
+  border-radius: 10px;
+
+  background: #dff3df;
+
+  border: 1px solid #74ad7e;
+
+  color: #173f2a;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  animation: cartMessageIn 0.3s ease;
+}
+
+@keyframes cartMessageIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.products-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.product-card {
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #b7d7c0;
+
+  box-shadow:
+    0 7px 22px
+    rgba(23, 63, 42, 0.09);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  animation: productCardIn 0.45s ease both;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px
+    rgba(23, 63, 42, 0.16);
+}
+
+@keyframes productCardIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.product-image-container {
+  height: 190px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #dcebdc;
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.product-card:hover
+.product-image-container img {
+  transform: scale(1.05);
+}
+
+.product-category {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #f5c542;
+
+  color: #173f2a;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
+
+.product-card-content {
+  padding: 17px;
+}
+
+.product-card-content h2 {
+  margin: 0 0 7px;
+
+  color: #173f2a;
+
+  font-size: 22px;
+
+  line-height: 1.1;
+}
+
+.product-price {
+  color: #d95620;
+
+  font-size: 23px;
+
+  font-weight: bold;
+}
+
+.product-price span {
+  color: #6b7e72;
+
+  font-size: 14px;
+
+  font-weight: normal;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.product-info {
+  margin-top: 13px;
+
+  padding-top: 11px;
+
+  border-top: 1px solid #d9e5dc;
+}
+
+.product-info div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 6px;
+
+  color: #53685b;
+
+  font-size: 14px;
+}
+
+.product-info div:last-child {
+  margin-bottom: 0;
+}
+
+.product-info div span:first-child {
+  width: 20px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+.add-cart-button {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 11px 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f5c542;
+
+  color: #173f2a;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-cart-button:hover {
+  background: #e9b82d;
+
+  transform: translateY(-2px);
+}
+
+.add-cart-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+   ========================================================= */
+
+.no-products {
+  padding: 70px 20px;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 2px dashed #9bc9ae;
+}
+
+.no-products div {
+  font-size: 45px;
+}
+
+.no-products h2 {
+  margin: 12px 0 5px;
+
+  color: #173f2a;
+
+  font-size: 25px;
+}
+
+.no-products p {
+  margin: 0;
+
+  color: #607468;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+  .products-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .products-page {
+    margin-left: 82px;
+  }
+
+  .products-main {
+    padding: 25px 20px 35px;
+  }
+
+  .products-header {
+    padding: 22px;
+
+    align-items: flex-start;
+  }
+
+  .products-header h1 {
+    font-size: 28px;
+  }
+
+  .products-controls {
+    flex-direction: column;
+  }
+
+  .products-controls select {
+    width: 100%;
+
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header {
+    flex-direction: column;
+  }
+
+  .products-count {
+    align-self: flex-start;
+  }
+
+  .products-main {
+    padding: 20px 15px 30px;
+  }
+}
+/* Real database-backed marketplace cards */
+.product-image-placeholder{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef4df,#f9f1c8);overflow:hidden;font-size:54px}
+.product-image-placeholder img{width:100%;height:100%;object-fit:cover}
+.product-card-body{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:18px}
+.product-category{font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:.7px;color:#52734d}
+.product-card-body h2{margin:0;color:#173f2a;font-size:23px}
+.product-card-body p{margin:0;color:#5c6c5d;font-size:15px}
+.product-price{font-size:21px;color:#1c5837}
+.product-card-body small{color:#65705c;line-height:1.4}
+.product-card-body button{width:100%;border:0;border-radius:9px;padding:11px 13px;background:#1f5637;color:#fff8df;font-weight:bold;margin-top:5px}
+.product-card-body button.trace-link{background:#f5c542;color:#203d2b}
+.products-empty{background:#fff;border:1px solid #e6e0cc;border-radius:18px;padding:48px 24px;text-align:center;color:#607468}
+.products-empty>span{font-size:48px}.products-empty h2{margin:10px;color:#173f2a}
+.product-qr{width:110px;height:110px;object-fit:contain;align-self:center;margin:5px auto;border:1px solid #e6e0cc;border-radius:8px}
+
+.demo-price-label { display: inline-block; margin: 4px 0; color: #7a3e00; background: #fff1c2; border-radius: 6px; padding: 4px 7px; font-size: .72rem; font-weight: 700; }

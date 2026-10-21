@@ -1,0 +1,650 @@
+/* =========================================================
+   FARMCONNECT LOGIN PAGE
+   ========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(255, 221, 94, 0.45),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(245, 197, 66, 0.30),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #173f2a 0%,
+      #28553d 48%,
+      #173f2a 100%
+    );
+
+  font-family: "Times New Roman", serif;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCHER
+   ========================================================= */
+
+.login-language-switch {
+  position: fixed;
+
+  top: 20px;
+  right: 24px;
+
+  display: flex;
+  gap: 3px;
+
+  padding: 4px;
+
+  background: #f5f8ef;
+
+  border: 1px solid #9bbca5;
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 12px rgba(23, 63, 42, 0.18);
+
+  z-index: 1000;
+}
+
+.login-language-switch button {
+  border: none;
+
+  background: transparent;
+
+  color: #28553d;
+
+  padding: 7px 13px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 14px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.login-language-switch button:hover {
+  background: #e6f0df;
+}
+
+.login-language-switch button.active {
+  background: #f5c542;
+
+  color: #173f2a;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+  width: 100%;
+  max-width: 530px;
+
+  box-sizing: border-box;
+
+  padding: 38px 48px 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8d6 0%,
+      #fff2b8 100%
+    );
+
+  border: 2px solid #f5c542;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+
+  animation: loginCardAppear 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD ANIMATION
+   ========================================================= */
+
+@keyframes loginCardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.login-logo {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5c542;
+
+  border-radius: 20px;
+
+  font-size: 42px;
+
+  box-shadow:
+    0 8px 18px rgba(23, 63, 42, 0.18);
+}
+
+
+/* =========================================================
+   FARMCONNECT TITLE
+   ========================================================= */
+
+.login-card h1 {
+  margin: 0;
+
+  color: #173f2a;
+
+  font-size: 40px;
+
+  line-height: 1.1;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.login-subtitle {
+  margin: 10px 0 28px;
+
+  color: #456653;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   WELCOME BACK
+   ========================================================= */
+
+.login-card h2 {
+  margin: 0 0 22px;
+
+  color: #28553d;
+
+  font-size: 27px;
+
+  line-height: 1.25;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.login-card form {
+  width: 100%;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.login-field {
+  width: 100%;
+
+  margin-bottom: 18px;
+}
+
+.login-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #173f2a;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.login-field input {
+  width: 100%;
+
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: 2px solid #9bbca5;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #173f2a;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 17px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-field input::placeholder {
+  color: #7a8b80;
+}
+
+.login-field input:focus {
+  border-color: #f5c542;
+
+  background: #fffef5;
+
+  box-shadow:
+    0 0 0 3px rgba(245, 197, 66, 0.20);
+}
+
+
+/* =========================================================
+   PASSWORD WRAPPER
+   ========================================================= */
+
+.login-password-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.login-password-wrapper input {
+  padding-right: 72px;
+}
+
+
+/* =========================================================
+   SHOW / HIDE PASSWORD
+   ========================================================= */
+
+.login-show-password {
+  position: absolute;
+
+  right: 8px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: #28553d;
+
+  color: #fff8d6;
+
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-show-password:hover {
+  background: #173f2a;
+
+  transform: translateY(-50%) scale(1.03);
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+   ========================================================= */
+
+.forgot-password-link {
+  display: block;
+
+  width: 100%;
+
+  margin-top: -5px;
+  margin-bottom: 12px;
+
+  padding: 5px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #c58d00;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  text-align: right;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #8f6500;
+
+  text-decoration: underline;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.login-error {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin: 10px 0 14px;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  background: #ffe2df;
+
+  border: 1px solid #e47a70;
+
+  color: #9b241c;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-submit-button {
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #28553d;
+
+  color: #fff8d6;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 19px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px rgba(23, 63, 42, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-submit-button:hover:not(:disabled) {
+  background: #173f2a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 16px rgba(23, 63, 42, 0.24);
+}
+
+.login-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REGISTER SECTION
+   ========================================================= */
+
+.login-register-section {
+  margin-top: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  flex-wrap: wrap;
+
+  color: #667b6c;
+
+  font-size: 17px;
+}
+
+.login-register-section button {
+  border: none;
+
+  background: transparent;
+
+  color: #28553d;
+
+  padding: 0;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  text-decoration: underline;
+
+  transition: color 0.2s ease;
+}
+
+.login-register-section button:hover {
+  color: #b17c00;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+   ========================================================= */
+
+.login-home-button {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #52705d;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-home-button:hover {
+  color: #28553d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .login-page {
+    min-height: 100vh;
+
+    padding:
+      80px 15px 30px;
+
+    align-items: flex-start;
+  }
+
+  .login-card {
+    max-width: 100%;
+
+    padding:
+      30px 22px 25px;
+
+    border-radius: 20px;
+  }
+
+  .login-logo {
+    width: 65px;
+    height: 65px;
+
+    font-size: 35px;
+  }
+
+  .login-card h1 {
+    font-size: 32px;
+  }
+
+  .login-subtitle {
+    font-size: 16px;
+
+    margin-bottom: 22px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+  }
+
+  .login-language-switch {
+    top: 12px;
+    right: 12px;
+  }
+
+  .login-field label {
+    font-size: 17px;
+  }
+
+  .login-field input {
+    font-size: 16px;
+  }
+
+  .login-register-section {
+    font-size: 16px;
+  }
+
+  .login-register-section button {
+    font-size: 16px;
+  }
+}
+.demo-account-picker { margin-top: 18px; padding: 14px; border: 1px dashed #70a875; border-radius: 12px; background: #f3fbf1; }
+.demo-account-picker h3 { margin: 0 0 6px; font-size: 1rem; }
+.demo-account-picker p { margin: 0 0 10px; font-size: .88rem; }
+.demo-account-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.demo-account-buttons button { border: 1px solid #397a46; border-radius: 8px; padding: 8px 10px; background: white; color: #194b27; cursor: pointer; }

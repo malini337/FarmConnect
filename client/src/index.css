@@ -1,0 +1,13 @@
+:root {
+  font-family: "Times New Roman", Times, serif;
+  color: #203d2b;
+  background: #f7f5ec;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+*, *::before, *::after { box-sizing: border-box; font-family: "Times New Roman", Times, serif !important; }
+html, body, #root { width: 100%; min-height: 100%; margin: 0; }
+body { min-height: 100vh; overflow-x: hidden; overflow-y: auto; }
+button, input, textarea, select, option { font-family: "Times New Roman", Times, serif !important; }
+button { cursor: pointer; }
+img { max-width: 100%; }
